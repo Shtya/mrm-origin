@@ -5,6 +5,7 @@ import {  ImageGalleryHome2 } from '../components/Images2';
 import { useTranslation } from 'react-i18next';
 
 import Animation from "../components/helpers/Animation";
+import Clients from "../components/Clients";
 
 const  Landing    = lazy(() => import("../components/Landing"));
 const  Why        = lazy(() => import("../components/Why"));
@@ -27,36 +28,55 @@ function Home() {
       
        <Animation />
        
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Landing /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Landing /> 
+        </Suspense>
 
         <Divider classn="divider" />
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Who /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Who /> 
+        </Suspense>
 
 
         <Divider classn="divider-left" />
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Why /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Why /> 
+        </Suspense>
 
 
         <Divider classn="divider" />
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Services /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Services /> 
+        </Suspense>
 
 
         <Divider classn="divider-left" />
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <NewSlider  DATA={ImageGalleryHome2} typeOf="Signages" title={t("home.Home_Header.name")}   header1={t("home.Home_Header.header",{returnObjects:true})}  />  </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <NewSlider  DATA={ImageGalleryHome2} typeOf="Signages" title={t("home.Home_Header.name")}   header1={t("home.Home_Header.header",{returnObjects:true})}  />  
+        </Suspense>
 
         
         
         <Divider classn="divider" />
-         <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Clients2 /> </Suspense>
+         <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Clients2 /> 
+         </Suspense>
+         {/* <Clients /> */}
 
-         <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Contact />  </Suspense>
+         <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Contact />  
+         </Suspense>
 
 
         <Divider classn="divider" />
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Blog /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Blog /> 
+        </Suspense>
 
         
-        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> <Footer  /> </Suspense>
+        <Suspense fallback={<div style={{background:"black" , height:"100vh"}}></div>}> 
+            <Footer  /> 
+        </Suspense>
         </div>
   );
 }

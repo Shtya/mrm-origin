@@ -195,7 +195,7 @@ export const Ar = {
         ]
       },
       "Home_Header": {
-        // "name": "أعمالنا",
+        "name": "أعمالنا",
         // "name":"OUR WORKS" ,"header":[ {"name" :"Signages" , "type":"Signages"},  {"name" :"Stands" , "type":"Displaystands"},  {"name" :"Exhibition" , "type":"Exhibition"},  {"name" :"branding" , "type":"branding"},  {"name" :"photography" , "type":"photography"},  {"name" :"Web design" , "type":"Web"} ,  {"name" :"Corporate Gifts" , "type":"Gifts"}]
 
         "header": [

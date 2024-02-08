@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState  , memo} from 'react'
+import React, { useEffect, useRef, useState  , memo, Suspense} from 'react'
 import { Animate } from '../App'
 import IMG3 from "../assets/bg/b3.webp"
 
@@ -23,26 +23,20 @@ export default memo(function NewSlider({header1 , typeOf , DATA , classHeader , 
   const [data , setdata] = useState(DATA)
   const [type , settype] = useState(typeOf)
 
-  useEffect(_=>{
-    localStorage.getItem("lang") ? setdata(DATA) : setdata(DATA)
-    console.log(data , localStorage.getItem("lang") )
-  },[localStorage.getItem("lang")])
-
-  useEffect(_=>{ setdata(DATA.filter(e => e.name?.includes("all"))) },[])
+  useEffect(_=>{ setdata(DATA.filter(e => e.name?.includes("all"))) },[localStorage.getItem("lang")])
 
   const handleFilter = (ele) => {
     setdata(DATA.filter(e => e.name.includes(ele))) 
     settype(ele)
   }
 
-
   const settings = {
     onSlideChange : ()=> settype(document.querySelectorAll(".swiper-slide-next img")[0]?.dataset?.type?.split(" ")[0])  ,
     slidesPerView: 2 ,
     spaceBetween: 0 ,
     loop:true, 
-    speed: 3000 ,
-    autoplay:{delay: 0 , "disableOnInteraction": false} ,
+    speed: 4000 ,
+    autoplay:{delay: 500 , "disableOnInteraction": false} ,
     pagination: {clickable: true },
     modules: [ Autoplay , Navigation , Scrollbar],
     navigation:true,
@@ -65,17 +59,14 @@ export default memo(function NewSlider({header1 , typeOf , DATA , classHeader , 
           {header?.map((e,index)=> (<li className={type == e.type ? "active p" : "p"}  onClick={_=>handleFilter(e.type)} key={index}>{e.name}</li>))} 
         </ul>
 
-          <div className="container">
+          <div className="container" style={{direction:"rtl"}}>
               <Swiper  {...settings}    className="mySwiper" ref={swiperRef}  >
-
-                {data.length > 0 && data?.map((ele,idx)=>( 
+                {data.map((ele,idx)=>( 
                     <SwiperSlide key={idx} > 
                     { ele.images.map((e,index)=> ( <img width={300} height={300} loading='lazy' onClick={_=>handleImg(e.img)}  key={index} src={e.img} data-type={`${ele.name}`}  alt={e?.alt || e?.type || "image"}  />  )) }
-                    
                     </SwiperSlide>
                     )) }
               </Swiper>
-
               {
                 showImg && <div className="showImagePreview">
                   <img className='showImage' src={showImg} alt="image" />

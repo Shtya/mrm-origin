@@ -55,7 +55,6 @@ const Blog = memo(() => {
   return (
     <section className='blog' id='Blog'>
       
-      <div className="bgCover"  >  <img src={IMG3} alt="blog"  /> </div>
       <div className="container"> 
         <div className="h1"onClick={_=> navigate("/blog")} style={{cursor:'pointer'}} data-aos="zoom-in" >{t("home.blog.h1")}</div> 
         <p className="phead" data-aos="zoom-in">{t("home.blog.phead")}</p>

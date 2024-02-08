@@ -13,7 +13,7 @@ const Who =memo(() => {
   return(
     <section className="Who search-edite " id='who' >
       <Animation />
-      <div className="bgCover"  >  <img  src={IMG1} alt="who" /> </div>
+      <div className="bgCover2"  >  <img  src={IMG1} alt="who" /> </div>
       <div className="container">
 
       <div className="Img " >

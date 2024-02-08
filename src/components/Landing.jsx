@@ -20,7 +20,6 @@ const Landing = memo(() => {
 
   return (
     <header id='header'  >
-      <div className="bgCover" style={{zIndex:"0"}}  >  <img  loading='lazy' src={IMG3} alt="Landing"  /> </div>
       <div className="container"> <Navbar /> </div>
       <section id='video' >
 

@@ -11,7 +11,6 @@ const Services = memo(()=> {
   return (
     <>
     <section className='services search-edite' id='Services'>
-    <div className="bgCover"  >  <img   src={IMG3} alt="services"  /> </div>
       <h2 className='h1 clip ' data-aos="zoom-in" >{t("home.Home_Services3.h1")}</h2> 
       
       <div className="container">

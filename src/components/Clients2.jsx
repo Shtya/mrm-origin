@@ -72,7 +72,6 @@ const Clients2 = memo(() => {
 
     return (
     <section className='Clients2' id='Clients'>
-      <div className="bgCover"  >  <img  src={IMG3} alt="services"  /> </div>
       <div className="container">
       <div className="h1 " >{t("home.client")}</div>
       </div>

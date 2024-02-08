@@ -1,7 +1,7 @@
 import { useState  ,useRef, memo} from 'react'
 import Animation from './helpers/Animation';
 import FormImg from "../assets/contact.jpg"
-import IMG1 from "../assets/bg/b1.webp"
+import IMG1 from "../assets/bg/b3.webp"
 import emailjs from '@emailjs/browser';
 import { Pattern9 } from './patterns/Pattern1';
 import { useTranslation } from 'react-i18next';

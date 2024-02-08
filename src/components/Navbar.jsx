@@ -16,6 +16,7 @@ const Navbar1 = memo(() => {
     localStorage.setItem("lang" , e)
     i18n.changeLanguage(e || localStorage.getItem("lang") )
     setlanguage(localStorage.getItem("lang") == "ar" ? "العربية" : "English")
+    // window.location.reload()
   }
 
   // when scroll up

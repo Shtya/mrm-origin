@@ -17,7 +17,7 @@ const Loading = () => {
       await pathname == "/blog" || pathname == "/" ? settime(true) : settime(false)
       setTimeout(() => {
         settime(false)
-      }, 2000);
+      }, 1300);
     }
 
     data()
