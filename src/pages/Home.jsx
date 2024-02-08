@@ -6,18 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 import Animation from "../components/helpers/Animation";
 
-// import Landing   from "../components/Landing";
-// import Why       from "../components/Why";
-// import Who       from "../components/Who";
-// import Services  from "../components/Services";
-// import Blog      from "../components/Blog";
-// import Clients2  from "../components/Clients2"
-// import Contact   from "../components/Contact";
-// import NewSlider from "../components/NewSlider";
-// import Footer    from "../components/Footer";
-
-
-
 const  Landing    = lazy(() => import("../components/Landing"));
 const  Why        = lazy(() => import("../components/Why"));
 const  Who        = lazy(() => import("../components/Who"));

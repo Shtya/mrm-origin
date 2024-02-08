@@ -6,12 +6,16 @@ import { useTranslation } from 'react-i18next';
 
 const Navbar1 = memo(() => {
   const {pathname} =useLocation() ;
-
   // herflang
+  const [language , setlanguage] = useState()
+  useEffect(_=> {setlanguage(localStorage.getItem("lang") == "ar" ? "العربية" : "English") } ,[])
+
   const { t, i18n } = useTranslation();
-  const handleLang = (e)=>{
-    localStorage.setItem("lang" , e.target.value)
-    i18n.changeLanguage(e.target.value || localStorage.getItem("lang") )
+
+  const handleTranslation = (e)=>{
+    localStorage.setItem("lang" , e)
+    i18n.changeLanguage(e || localStorage.getItem("lang") )
+    setlanguage(localStorage.getItem("lang") == "ar" ? "العربية" : "English")
   }
 
   // when scroll up
@@ -82,11 +86,14 @@ const Navbar1 = memo(() => {
             <li data-aos="fade-down" data-aos-delay="500" onClick={_=> Navigate("/about-us")}><Link  className={pathname == "/about-us" ? "active":""} to="/about-us">    {t("Nav.li13")}  </Link></li>
             <li data-aos="fade-down" data-aos-delay="600" onClick={_=> Navigate("/contact-us")}><Link  className={pathname == "/contact-us" ? "active":""} to="/contact-us">    {t("Nav.li14")}  </Link></li>
             
-            <select data-aos="fade-down" data-aos-delay="700" className='tran' value={localStorage.getItem("lang")|| "en"}  onChange={e => handleLang(e)}>
-              <option value="en">English</option>
-              <option value="en">العربية</option>
-            </select>
-
+            <div className="language"  data-aos="fade-down" data-aos-delay="700">
+              <div className='main' > {language}  <i className='bx bxs-chevron-down '></i> </div>
+              <div className="select">
+                <span onClick={_=> handleTranslation("ar")} > العربية </span>
+                <span onClick={_=> handleTranslation("en")} > English </span>
+              </div>
+            </div>
+            
           </ul>
         </div>
       </div>

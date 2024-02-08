@@ -1,3 +1,6 @@
+
+
+
 import React from 'react'
 
 const BoxBorderRight = ({Img , title , data , phead}) => {

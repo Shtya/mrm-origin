@@ -16,15 +16,19 @@ import 'swiper/swiper-bundle.css';
 SwiperCore.use([Autoplay]);
 
 
-export default function NewSlider ({header1 , typeOf , DATA , classHeader , schema , title}) {
+export default memo(function NewSlider({header1 , typeOf , DATA , classHeader , schema , title}) {
   const swiperRef = useRef(null)
   
   const header =header1
   const [data , setdata] = useState(DATA)
   const [type , settype] = useState(typeOf)
 
+  useEffect(_=>{
+    localStorage.getItem("lang") ? setdata(DATA) : setdata(DATA)
+    console.log(data , localStorage.getItem("lang") )
+  },[localStorage.getItem("lang")])
+
   useEffect(_=>{ setdata(DATA.filter(e => e.name?.includes("all"))) },[])
-  // useEffect(_=> {  setdata(DATA.filter(e => e.name?.includes("all")))  } ,[])
 
   const handleFilter = (ele) => {
     setdata(DATA.filter(e => e.name.includes(ele))) 
@@ -38,7 +42,6 @@ export default function NewSlider ({header1 , typeOf , DATA , classHeader , sche
     spaceBetween: 0 ,
     loop:true, 
     speed: 3000 ,
-    // preloadImages: true,
     autoplay:{delay: 0 , "disableOnInteraction": false} ,
     pagination: {clickable: true },
     modules: [ Autoplay , Navigation , Scrollbar],
@@ -83,4 +86,4 @@ export default function NewSlider ({header1 , typeOf , DATA , classHeader , sche
     </div>
   )
 }
-
+)

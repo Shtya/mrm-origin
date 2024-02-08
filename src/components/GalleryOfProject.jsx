@@ -1,6 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import FixedImg from "../assets/bg/1.webp"
 import Cover from "../assets/bg/coverEvents.jpg" 
+import Img1 from "../assets/Icon/projects/1 (1).webp"
+import Img2 from "../assets/Icon/projects/1 (2).webp"
+import Img3 from "../assets/Icon/projects/1 (3).webp"
+import Img4 from "../assets/Icon/projects/1 (4).webp"
+import Img5 from "../assets/Icon/projects/1 (5).webp"
+import Img6 from "../assets/Icon/projects/1 (6).webp"
+import Img7 from "../assets/Icon/projects/1 (7).webp"
+import Img8 from "../assets/Icon/projects/1 (8).webp"
+
 
 import P_Imgmain2 from "../assets/gallery/1.RECEPTION/Reception Signage 600x600-03.webp"
 import P_Imgmain3 from "../assets/gallery/1.RECEPTION/Reception Signage 600x600-04.webp"
@@ -16,10 +25,10 @@ const GalleryOFportfolio = () => {
   const [indexImg , setindexImg] = useState(0)
 
   const [projects , setProjects] = useState([
-    {  curr: 0 , id: 1 ,  images:{main:Cover , submain:[Cover ,P_Imgmain2 ,P_Imgmain3 ,P_Imgmain4]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
-    {  curr: 0 , id: 2 ,  images:{main:Cover , submain:[Cover ,P_Imgmain2 ,P_Imgmain3 ,P_Imgmain4]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
-    {  curr: 0 , id: 3 ,  images:{main:Cover , submain:[Cover ,P_Imgmain2 ,P_Imgmain3 ,P_Imgmain4]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
-    {  curr: 0 , id: 4 ,  images:{main:Cover , submain:[Cover ,P_Imgmain2 ,P_Imgmain3 ,P_Imgmain4]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
+    {  curr: 0 , id: 1 ,  images:{main:Img1 , submain:[Img2 ,Img1 ,Img2 ,Img3]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
+    {  curr: 0 , id: 2 ,  images:{main:Img3 , submain:[Img4 ,Img1 ,Img2 ,Img3]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
+    {  curr: 0 , id: 3 ,  images:{main:Img5 , submain:[Img6 ,Img1 ,Img2 ,Img3]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
+    {  curr: 0 , id: 4 ,  images:{main:Img7 , submain:[Img8 ,Img1 ,Img2 ,Img3]} , routes:"" , title:"Lorem ipsum dolor" , desc:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium laborum, minima itaque architecto magnam explicabo beatae. Quas quis consectetur velit itaque modi soluta rerum, aliquid asperiores quod dolore aliquam inventore distinctio labore dolorum atque assumenda delectus officia praesentium? Rem, beatae!" },
   ])
 
 
