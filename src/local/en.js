@@ -70,16 +70,16 @@ import TiktokImg_2_1 from "../assets/Icon/tiktok_2_1.webp" ;import TiktokImg_2_2
 
 export const En = {
   "Nav":{
-    li1:"Home",
-    li2:"Services",
-    li3:"web design & Development ",
-    li4:"photography & videography",
-    li5:"exhibition & display stands",
-    li6:"indoor & outdoor signages",
-    li7:"social media marketing",
-    li8:"Corporate gifts",
-    li9:"media buying",
-    li10:"Branding",
+    li1: "Home",
+    li2: "Services",
+    li3: "web design & Development ",
+    li4: "photography & videography",
+    li5: "exhibition & display stands",
+    li6: "indoor & outdoor signages",
+    li7: "social media marketing",
+    li8: "Corporate gifts",
+    li9: "media buying",
+   li10: "Branding",
     li11:"SEO",
     li12:"Blog",
     li13:"About Us",
@@ -166,7 +166,10 @@ export const En = {
   },
 
   "blog":{
-    "Qutaion":"Stay updated with our latest news, strategies, and tactics to succeed in your business."
+    "Qutaion":"Stay updated with our latest news, strategies, and tactics to succeed in your business.",
+    "sec1" : "DIGITAL MARKETING NEWS",
+    "sec2" : "LATEST UPDATES & INSIGHTS",
+    "sec3" : "TIPS & STRATEGIES",
   },
 
   "about_us":{

@@ -65,7 +65,7 @@ body {
   font-family: "El Messiri", sans-serif;
   direction: rtl;
 }
-.App.lang-ar .tran, .App.lang-ar textarea {
+.App.lang-ar .tran, .App.lang-ar textarea, .App.lang-ar input, .App.lang-ar select, .App.lang-ar button, .App.lang-ar .h1 {
   font-family: "El Messiri", sans-serif;
 }
 
@@ -4007,6 +4007,7 @@ footer .container .bottom .last a {
   left: 0;
   top: -84px;
   width: 100%;
+  z-index: 10;
   overflow: hidden;
 }
 @media (min-width: 1200px) {
@@ -4051,7 +4052,6 @@ footer .container .bottom .last a {
   flex-direction: column;
   min-height: 20vh;
   padding: 50px 0;
-  z-index: 105;
   position: relative;
 }
 @media (max-width: 550px) {
@@ -4151,6 +4151,10 @@ footer .container .bottom .last a {
   .blog-page .Slider_1_Img.blog-2 {
     padding: 20px 0 !important;
   }
+}
+
+.fa-solid.fa-angle-right {
+  font-family: "Font Awesome 6 Free" !important;
 }
 
 /*================================ CONTACT_PAGE ================================*/
@@ -5466,6 +5470,13 @@ footer .container .bottom .last a {
 .lang-ar footer .container .center ul .group input {
   padding: 7px 65px 7px 7px;
 }
+.lang-ar .landing .home .container .boxs * {
+  text-align: right !important;
+}
+.lang-ar .landing .home .container .boxs .inner-boxs li {
+  margin-right: 25px;
+  margin-left: unset !important;
+}
 
 .language {
   height: 35px;
@@ -5474,6 +5485,14 @@ footer .container .bottom .last a {
   align-items: center;
   width: 100px;
   position: relative;
+}
+@media (max-width: 900px) {
+  .language {
+    width: 100% !important;
+  }
+  .language .select {
+    width: 100% !important;
+  }
 }
 .language:hover i {
   rotate: 180deg;

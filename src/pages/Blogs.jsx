@@ -13,9 +13,11 @@ import Animation from '../components/helpers/Animation';
 import baseURL, { baseImg } from '../API/API';
 import { useLocation } from 'react-router-dom';
 import MetaTag from './MetaTag';
+import { useTranslation } from 'react-i18next';
 
 const Blogs = () => {
-  const {pathname} = useLocation()
+  const {t} = useTranslation() ;
+
   const [Digital , setDigital] = useState([])
   const [Latest , setLatest] = useState([])
   const [Tips , setTips] = useState([])
@@ -74,20 +76,20 @@ const Blogs = () => {
       <Animation />
       <div className="container"> <Navbar /></div>
         <div className="coverIntro" style={{marginBottom:"-83px"}}> <img src={IntroImg} alt="Chic 'OUR BLOG' text over a laptop on a desk" /></div>
-        {/* <Divider classn="divider divider-top" /> */}
+
         <div className="quotation">
-        <div className="bgCover"  >  <img  src={IMG1} alt="blogs"  /> </div>
+        <div className="bgCover2"   >  <img  src={IMG1} alt="blogs"  /> </div>
         
           <div className="container">
-            <p className="h3 " data-aos="fade-up">Stay updated with our latest news, strategies, and tactics to succeed in your business.</p>
+            <p className="h3 " data-aos="fade-up">{t("blog.Qutaion")}</p>
           </div>
           </div>
         <Divider classn="divider " />
-        <OneBlog onHere={true} classn="blog-1" name="Digital Marketing News" settings={settings}  blogs={Digital} />
+        <OneBlog onHere={true} classn="blog-1" name={t("blog.sec1")} settings={settings}  blogs={Digital} />
         <Divider classn="divider-left" />
-        <OneBlog onHere={false} classn="blog-2" name="Latest Updates & Insights" settings={settings}  blogs={Latest} />
+        <OneBlog onHere={false} classn="blog-2" name={t("blog.sec2")} settings={settings}  blogs={Latest} />
         <Divider classn="divider" />
-        <OneBlog onHere={true} classn="blog-3" name="Tips & Strategies" settings={settings}  blogs={Tips} />
+        <OneBlog onHere={true} classn="blog-3" name={t("blog.sec2")} settings={settings}  blogs={Tips} />
 
       <Footer />
     </div>
