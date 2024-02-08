@@ -101,10 +101,10 @@ export const En = {
     "Home_section2":{
       "h1":"WHY CHOOSE US",
       "box":[
-        {"idx":"0" ,"icon": "fas fa-pencil-ruler font-icon"  , "title":"We're problem solvers" , "desc":"We conquer all challenges with creativity, determination, and a 'can-do' attitude. We have solutions to your problems. "},
+        {"idx":"0" ,"icon": "fas fa-pencil-ruler font-icon"      , "title":"We're problem solvers"             , "desc":"We conquer all challenges with creativity, determination, and a 'can-do' attitude. We have solutions to your problems. "},
         {"idx":"1" ,"icon": "fas fa-drafting-compass font-icon"  , "title":"We deliver results, not just talk" , "desc":"Our commitment is to implement effective strategies, never overpromise, work hard, and measure success by our achievements. "},
-        {"idx":"2" ,"icon": "fas fa-layer-group font-icon"  , "title":"We prioritize you" , "desc":"Your success drives us. We're always available to meet your needs, offer guidance, and listen closely to your input.  "},
-        {"idx":"3" ,"icon": "fas fa-rocket font-icon"  , "title":"We focus on your growth" , "desc":" Our solutions are always advanced, results-driven, and up-to-date with the latest technologies and trends. " }
+        {"idx":"2" ,"icon": "fas fa-layer-group font-icon"       , "title":"We prioritize you"                 , "desc":"Your success drives us. We're always available to meet your needs, offer guidance, and listen closely to your input.  "},
+        {"idx":"3" ,"icon": "fas fa-rocket font-icon"            , "title":"We focus on your growth"           , "desc":"Our solutions are always advanced, results-driven, and up-to-date with the latest technologies and trends. " }
       ]
     },
     "Home_Services3":{

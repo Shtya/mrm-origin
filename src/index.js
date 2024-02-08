@@ -1,4 +1,4 @@
-import React , {useEffect  ,useState} from 'react';
+import React , {Suspense, useEffect  ,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 import './i18n';
@@ -32,11 +32,12 @@ const Loading = () => {
 }
 
 
-createRoot(document.getElementById("root")).render(<BrowserRouter> 
-      <MetaTag   canonical=""   title="MRM | Best Digital Marketing & Advertising Agency in Dubai" desc="Boost your Brand with MRM Advertising, Top Digital Marketing & Advertising Agency in Dubai.We Offer Premier Digtal marketing, SEO and Web Design Services." />
-      <App /> 
-      <Loading />
-       </BrowserRouter>)
+createRoot(document.getElementById("root")).render(
+    <BrowserRouter> 
+        <MetaTag   canonical=""   title="MRM | Best Digital Marketing & Advertising Agency in Dubai" desc="Boost your Brand with MRM Advertising, Top Digital Marketing & Advertising Agency in Dubai.We Offer Premier Digtal marketing, SEO and Web Design Services." />
+        <App /> 
+        <Loading />
+      </BrowserRouter>  )
 
 
 
